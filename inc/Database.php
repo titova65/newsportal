@@ -21,6 +21,8 @@ class database{
 	function __destruct() {
 		$this->disconnect();
 	}
+
+
 	function connect() {
 		if(!$this->conn) {
 			try {
@@ -30,9 +32,10 @@ class database{
 			catch  (Exception $e) {
 			die('Connection failed : ' . $e->getMessage());
 			}
+	    }
 		return $this->conn;
-}
-}
+
+    }
 
 	
 	function disconnect() {
@@ -40,6 +43,7 @@ class database{
 			$this->conn = null;
 		}
 	}
+	
 	function getOne($query) {
 		$stmt = $this->conn->prepare ($query);
 		$stmt->execute();
@@ -57,7 +61,7 @@ class database{
 		return $response;
 
 	}
-	function executeRun($query){
+	function executeRun($query) {
 		$response = $this->conn->exec($query);
 		return $response;
 	}

@@ -42,7 +42,7 @@
 </section>
 
        <hr>
-       <p style="display: block; text-align:center;">SKTVRp19 2021 a. &copy</p>
+       <p style="display:block; text-align:center;">SKTVRp19 2021 a. &copy</p>
 
      </body>
 </html>

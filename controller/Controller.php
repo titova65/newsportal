@@ -33,21 +33,21 @@ class Controller
 		include_once 'view/error404.php';
 	}
 
-	public static function InsertComment($c,$id){
+	public static function InsertComment($c,$id) {
 	Comments::InsertComment($c,$id);
 	//self::NewsByID($id);
 	header('Location:news?id='.$id.'#ctable');
     }
     //список комментариев
 
-    public static function Comments($newsid){
+    public static function Comments($newsid) {
 	$arr = Comments::getCommentByNewsID($newsid);
 	ViewComments::CommentsByNews($arr);
 	}
 
 	//количество комментариев к новости
 
-	public static function CommentsCount($newsid){
+	public static function CommentsCount($newsid)  {
 	     $arr = Comments::getCommentsCountByNewsID($newsid);
 	     ViewComments::CommentsCount($arr);
 	}
@@ -55,7 +55,7 @@ class Controller
 	//ССылка- переход к списку комментариев
 
 
-	public static function CommentsCountWithAncor($newsid){
+	public static function CommentsCountWithAncor($newsid)  {
 	    $arr = Comments::getCommentsCountByNewsID($newsid);
 	    ViewComments::CommentsCountWithAncor($arr);
 	}

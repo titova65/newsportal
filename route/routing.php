@@ -5,10 +5,10 @@ $host = explode('?', $_SERVER['REQUEST_URI'])[0];
 $num = substr_count($host, '/');
 $path = explode('/', $host) [$num];
 
-
+echo $path;
 
 if ($path == '' OR $path == 'index' OR $path == 'index.php') {
-	
+	echo "one news";
 	$response = Controller::StartSite();
 }
 
@@ -23,6 +23,7 @@ $response = Controller::NewsByCatID($_GET['id']);
 }
 
 elseif($path == 'news' and isset($_GET['id'])) {
+	echo "one news";
 	$response = Controller::NewsByID($_GET['id']);
 
 }
