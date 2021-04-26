@@ -30,7 +30,7 @@ class database{
 	        array (PDO::MYSQL_ATTR_INIT_COMMAND =>  'SET NAMES utf8'));
 			}		
 			catch  (Exception $e) {
-			die('Connection failed : ' . $e->getMessage());
+			die('Connection failed : '. $e->getMessage());
 			}
 	    }
 		return $this->conn;

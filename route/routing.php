@@ -8,7 +8,7 @@ $path = explode('/', $host) [$num];
 echo $path;
 
 if ($path == '' OR $path == 'index' OR $path == 'index.php') {
-	echo "one news";
+	
 	$response = Controller::StartSite();
 }
 
@@ -18,7 +18,6 @@ elseif($path == 'all')  {
 }
 
 elseif($path == 'category' and isset($_GET['id'])) {
-
 $response = Controller::NewsByCatID($_GET['id']);
 }
 
