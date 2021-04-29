@@ -18,7 +18,7 @@ elseif($path == 'all')  {
 }
 
 elseif($path == 'category' and isset($_GET['id'])) {
-$response = Controller::NewsByCatID($_GET['id']);
+     $response = Controller::NewsByCatID($_GET['id']);
 }
 
 elseif($path == 'news' and isset($_GET['id'])) {

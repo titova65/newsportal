@@ -28,6 +28,7 @@ class ViewNews  {
         Controller::CommentsCountWithAncor($n['id']);
     	echo '<br><img src="data:image/jpeg;base64,'.base64_encode( $n['picture'] ).'" width=150 /><br>';
     	echo "<p>".$n['text']."</p>";
+
     }
 }
 
